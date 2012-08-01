@@ -1,0 +1,13 @@
+<%= form_for [@reader, @car] do |f| -%>
+  
+  <p>
+    <%= f.label :made %>
+    <%= f.text_field :made %>
+  </p>
+  <p>
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </p>
+ 
+  <%= f.submit %>
+<% end -%>

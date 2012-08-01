@@ -1,0 +1,13 @@
+<h2>Reader list</h2>
+
+<% @readers.each do |reader| -%>
+  <p>
+    <%= reader.name %>
+    <% reader.cars.each do |car| -%>
+      <%= car.made %>
+    <% end -%>
+    <%= link_to 'New car', new_reader_car_path(reader) %>
+  </p>
+<% end -%>
+
+<%= link_to 'New reader', new_reader_path %>
